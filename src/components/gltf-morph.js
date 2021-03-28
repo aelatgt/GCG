@@ -1,4 +1,3 @@
-//Source: https://github.com/elbobo/aframe-gltf-morph-component
 AFRAME.registerComponent('gltf-morph', {
   multiple: true,
   schema:{
@@ -35,3 +34,4 @@ AFRAME.registerComponent('gltf-morph', {
     });//end traverse
   },//end morpher
 })//end morph
+//Source: https://github.com/elbobo/aframe-gltf-morph-component

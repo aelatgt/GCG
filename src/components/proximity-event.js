@@ -8,7 +8,7 @@ const vec = new THREE.Vector3() // Scratch variable
 AFRAME.registerComponent('proximity-event', {
   schema: {
     event: { type: 'string', default: 'bump' },
-    radius: { type: 'number', default: 3 },
+    radius: { type: 'number', default: 1 },
   },
   init: function () {
     this.player = document.querySelector('#avatar-rig').object3D
