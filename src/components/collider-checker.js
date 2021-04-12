@@ -28,10 +28,18 @@ AFRAME.registerComponent('collider-checker', {
                 AFRAME.utils.entity.setComponentProperty(morph, "gltf-morph__realistic.value","0")
             }
             if (morphTarget != null){
-                AFRAME.utils.entity.setComponentProperty(morph, morphTarget + ".value","" + parseInt(step) * 0.066667)
+                if(step == 15){
+                    AFRAME.utils.entity.setComponentProperty(morph, morphTarget + ".value","1")
+                } else {
+                    AFRAME.utils.entity.setComponentProperty(morph, morphTarget + ".value","" + parseInt(step) * 0.066667)
+                }
             }
             if (oldTarget != null){
-                AFRAME.utils.entity.setComponentProperty(morph, oldTarget + ".value",""+1 - (parseInt(step) * 0.066667))
+                if (step == 15){
+                    AFRAME.utils.entity.setComponentProperty(morph, morphTarget + ".value","0")
+                } else {
+                    AFRAME.utils.entity.setComponentProperty(morph, oldTarget + ".value",""+1 - (parseInt(step) * 0.066667))
+                }
             }
         });
     },
