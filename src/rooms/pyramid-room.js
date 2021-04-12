@@ -36,7 +36,8 @@ for(var i =0; i < 16; i++){
     c1.setAttribute("color",'red')
     c1.setAttribute("proximity-event","")
     c1.setAttribute("collider-checker","")
-    c1.setAttribute("material","opacity: 0.0; transparent: true")
+    c1.setAttribute("material",{shader: "flat"})
+    //c1.setAttribute("material","opacity: 0.0; transparent: true")
     APP.scene.appendChild(c1);
 }
 
@@ -52,8 +53,8 @@ for(var i =0; i < 16; i++){
     c1.setAttribute("color",'green')
     c1.setAttribute("proximity-event","")
     c1.setAttribute("collider-checker","")
-    // c1.setAttribute("material",{shader: "flat"})
-    c1.setAttribute("material","opacity: 0.0; transparent: true")
+    c1.setAttribute("material",{shader: "flat"})
+    //c1.setAttribute("material","opacity: 0.0; transparent: true")
     APP.scene.appendChild(c1);
 }
 
@@ -69,6 +70,7 @@ for(var i =0; i < 16; i++){
     c1.setAttribute("color",'blue')
     c1.setAttribute("proximity-event","")
     c1.setAttribute("collider-checker","")
-    c1.setAttribute("material","opacity: 0.0; transparent: true")
+    c1.setAttribute("material",{shader: "flat"})
+    //c1.setAttribute("material","opacity: 0.0; transparent: true")
     APP.scene.appendChild(c1);
 }
