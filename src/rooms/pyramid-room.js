@@ -6,7 +6,7 @@ const assests  = document.createElement("a-assests")
 assests.setAttribute("timeout", "3000")
 APP.scene.appendChild(assests)
 const morphAsset = document.createElement("a-asset-item")
-morphAsset.setAttribute("src", "https://4678bfeb5da6.ngrok.io/entities/morphModel.glb")
+morphAsset.setAttribute("src", "http://www.aelatgt.org/GCG/entities/morphModel.glb")
 morphAsset.setAttribute("id", "morphAsset")
 assests.appendChild(morphAsset);
 
