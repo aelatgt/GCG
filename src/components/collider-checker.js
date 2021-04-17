@@ -6,9 +6,9 @@ AFRAME.registerComponent('collider-checker', {
         var oldTarget;
         var step;
         var morph = document.querySelector('#morph')
-        this.el.addEventListener('bump', function (evt) {
+        this.el.addEventListener('text', function (evt) {
             entered=this.getAttribute("id")
-            // console.log(entered)
+            console.log(entered)
             step = entered.substring(1);
             entered = entered.charAt(0);
             if (entered == 'a'){
@@ -28,18 +28,10 @@ AFRAME.registerComponent('collider-checker', {
                 AFRAME.utils.entity.setComponentProperty(morph, "gltf-morph__realistic.value","0")
             }
             if (morphTarget != null){
-                if(step == 15){
-                    AFRAME.utils.entity.setComponentProperty(morph, morphTarget + ".value","1")
-                } else {
-                    AFRAME.utils.entity.setComponentProperty(morph, morphTarget + ".value","" + parseInt(step) * 0.066667)
-                }
+                AFRAME.utils.entity.setComponentProperty(morph, morphTarget + ".value","" + (parseInt(step) * 0.066667))
             }
             if (oldTarget != null){
-                if (step == 15){
-                    AFRAME.utils.entity.setComponentProperty(morph, morphTarget + ".value","0")
-                } else {
-                    AFRAME.utils.entity.setComponentProperty(morph, oldTarget + ".value",""+1 - (parseInt(step) * 0.066667))
-                }
+                AFRAME.utils.entity.setComponentProperty(morph, oldTarget + ".value",""+(1 - (parseInt(step) * 0.066667)))
             }
         });
     },
